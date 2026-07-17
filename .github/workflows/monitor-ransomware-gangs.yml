@@ -226,22 +226,22 @@ jobs:
             exit 1
           fi
 
-          # Limit commit details to prevent an excessively large Slack message.
+          # Keep the message at a manageable size.
           MATCH_DETAILS="$(head -c 2500 "$MATCH_FILE")"
 
           MESSAGE="$(
-            printf '%s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s\n\n%s' \
-              ':rotating_light: *New ransomware gang commit detected*' \
-              "*Upstream repository:* <https://github.com/${UPSTREAM_REPOSITORY}|${UPSTREAM_REPOSITORY}>" \
-              "*Tracked file:* \`${TRACKED_FILE}\`" \
-              "*Matching Add commits:* ${MATCH_COUNT}" \
-              '```' \
+            printf '%s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n\n%s' \
+              ':rotating_light: New ransomware gang commit detected' \
+              "Upstream repository: https://github.com/${UPSTREAM_REPOSITORY}" \
+              "Tracked file: ${TRACKED_FILE}" \
+              "Matching Add commits: ${MATCH_COUNT}" \
+              'Commit details:' \
               "$MATCH_DETAILS" \
-              '```' \
-              "<https://github.com/${UPSTREAM_REPOSITORY}/commits/${UPSTREAM_BRANCH}/${TRACKED_FILE}|Review upstream file history>" \
-              '_Treat the new group or leak-site claim as unverified until corroborated._'
+              "File history: https://github.com/${UPSTREAM_REPOSITORY}/commits/${UPSTREAM_BRANCH}/${TRACKED_FILE}" \
+              'Treat the new group or leak-site claim as unverified until corroborated.'
           )"
 
+          # This must match the Slack Workflow Builder variable named "text".
           jq -n \
             --arg text "$MESSAGE" \
             '{text: $text}' \
@@ -261,17 +261,17 @@ jobs:
 
           SLACK_RESPONSE="$(cat "$RUNNER_TEMP/slack-response.txt")"
 
-          if [ "$HTTP_STATUS" != "200" ]; then
-            echo "::error::Slack returned HTTP ${HTTP_STATUS}: ${SLACK_RESPONSE}"
-            exit 1
-          fi
-
-          if [ "$SLACK_RESPONSE" != "ok" ]; then
-            echo "::error::Unexpected Slack response: ${SLACK_RESPONSE}"
-            exit 1
-          fi
-
-          echo "Slack accepted the notification."
+          # Workflow Builder webhooks may not return the literal response "ok".
+          # Any HTTP response from 200 through 299 is treated as successful.
+          case "$HTTP_STATUS" in
+            2??)
+              echo "Slack accepted the workflow webhook request."
+              ;;
+            *)
+              echo "::error::Slack returned HTTP ${HTTP_STATUS}: ${SLACK_RESPONSE}"
+              exit 1
+              ;;
+          esac
 
       # Synchronization takes place only after any required Slack notification
       # has been accepted.
