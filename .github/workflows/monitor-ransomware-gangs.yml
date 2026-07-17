@@ -1,8 +1,12 @@
 name: Monitor ransomware gang additions
 
 on:
-  # Manual execution only during initial setup.
-  # The schedule will be added after Slack is connected.
+  # Run automatically four times per hour.
+  # GitHub Actions schedules use UTC and may occasionally be delayed.
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+
+  # Also allow manual execution from the Actions page.
   workflow_dispatch:
 
 permissions:
@@ -14,6 +18,7 @@ concurrency:
 
 jobs:
   monitor:
+    name: Check deepdarkCTI for ransomware gang additions
     runs-on: ubuntu-latest
 
     env:
@@ -22,27 +27,32 @@ jobs:
       FORK_BRANCH: ${{ github.event.repository.default_branch }}
 
     steps:
+      # Full Git history is required to determine the merge base and inspect
+      # individual upstream commits.
       - name: Check out fork
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - name: Configure upstream repository
+      - name: Configure and fetch upstream repository
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
 
-          # Obtain the upstream repository's default branch.
           UPSTREAM_BRANCH="$(
             gh api "repos/${UPSTREAM_REPOSITORY}" \
-              --jq '.default_branch'
+              --jq ".default_branch"
           )"
+
+          if [ -z "$UPSTREAM_BRANCH" ]; then
+            echo "::error::Unable to determine the upstream default branch."
+            exit 1
+          fi
 
           echo "UPSTREAM_BRANCH=$UPSTREAM_BRANCH" >> "$GITHUB_ENV"
 
-          # Create or update the local upstream Git remote.
           if git remote get-url upstream >/dev/null 2>&1; then
             git remote set-url \
               upstream \
@@ -55,8 +65,10 @@ jobs:
 
           git fetch --no-tags upstream "$UPSTREAM_BRANCH"
 
-          echo "Fork branch: $FORK_BRANCH"
-          echo "Upstream branch: $UPSTREAM_BRANCH"
+          echo "Fork repository: ${GITHUB_REPOSITORY}"
+          echo "Fork branch: ${FORK_BRANCH}"
+          echo "Upstream repository: ${UPSTREAM_REPOSITORY}"
+          echo "Upstream branch: ${UPSTREAM_BRANCH}"
           echo "Fork SHA: $(git rev-parse HEAD)"
           echo "Upstream SHA: $(git rev-parse "upstream/${UPSTREAM_BRANCH}")"
 
@@ -67,25 +79,39 @@ jobs:
           set -euo pipefail
 
           UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
-          BASE_SHA="$(git merge-base HEAD "$UPSTREAM_REF")"
           MATCH_FILE="$RUNNER_TEMP/matching-commits.txt"
 
           : > "$MATCH_FILE"
 
-          MATCH_COUNT=0
+          if ! BASE_SHA="$(git merge-base HEAD "$UPSTREAM_REF")"; then
+            echo "::error::Unable to determine the shared Git history."
+            exit 1
+          fi
 
-          # Matches the exact, case-sensitive word "Add".
-          # Matches: Add D1R ransomware data leak site
-          # Does not match: Added, Adding, address
+          MATCH_COUNT=0
+          CHECKED_COUNT=0
+
+          # Match the exact, case-sensitive word "Add".
+          #
+          # Matches:
+          #   Add D1R ransomware data leak site
+          #   Update list: Add Example group
+          #
+          # Does not match:
+          #   Added D1R ransomware data leak site
+          #   Adding D1R ransomware data leak site
+          #   add D1R ransomware data leak site
           ADD_REGEX='(^|[^[:alnum:]_])Add([^[:alnum:]_]|$)'
 
-          echo "Checking commits in range:"
+          echo "Checking upstream commit range:"
           echo "${BASE_SHA}..${UPSTREAM_REF}"
           echo
-          echo "Only commits modifying ${TRACKED_FILE} will be checked."
+          echo "Tracked file: ${TRACKED_FILE}"
 
           while IFS= read -r COMMIT_SHA; do
             [ -n "$COMMIT_SHA" ] || continue
+
+            CHECKED_COUNT=$((CHECKED_COUNT + 1))
 
             SUBJECT="$(git log -1 --format='%s' "$COMMIT_SHA")"
             SHORT_SHA="$(git rev-parse --short "$COMMIT_SHA")"
@@ -97,19 +123,18 @@ jobs:
                 "$COMMIT_SHA"
             )"
 
-            echo "Checking: $SHORT_SHA - $SUBJECT"
+            echo "Checking ${SHORT_SHA}: ${SUBJECT}"
 
             if [[ "$SUBJECT" =~ $ADD_REGEX ]]; then
               MATCH_COUNT=$((MATCH_COUNT + 1))
 
               {
-                echo "SHA=$COMMIT_SHA"
-                echo "SHORT_SHA=$SHORT_SHA"
-                echo "SUBJECT=$SUBJECT"
-                echo "AUTHOR=$AUTHOR"
-                echo "DATE=$COMMIT_DATE"
-                echo "URL=https://github.com/${UPSTREAM_REPOSITORY}/commit/${COMMIT_SHA}"
-                echo "---"
+                echo "Commit: ${SHORT_SHA}"
+                echo "Subject: ${SUBJECT}"
+                echo "Author: ${AUTHOR}"
+                echo "Date: ${COMMIT_DATE}"
+                echo "URL: https://github.com/${UPSTREAM_REPOSITORY}/commit/${COMMIT_SHA}"
+                echo
               } >> "$MATCH_FILE"
             fi
           done < <(
@@ -119,16 +144,19 @@ jobs:
               -- "$TRACKED_FILE"
           )
 
+          echo "checked_count=$CHECKED_COUNT" >> "$GITHUB_OUTPUT"
           echo "match_count=$MATCH_COUNT" >> "$GITHUB_OUTPUT"
           echo "match_file=$MATCH_FILE" >> "$GITHUB_OUTPUT"
 
           if [ "$MATCH_COUNT" -gt 0 ]; then
             echo "matched=true" >> "$GITHUB_OUTPUT"
+
             echo
-            echo "Found $MATCH_COUNT matching commit(s):"
+            echo "Found ${MATCH_COUNT} matching commit(s):"
             cat "$MATCH_FILE"
           else
             echo "matched=false" >> "$GITHUB_OUTPUT"
+
             echo
             echo "No matching commits were found."
           fi
@@ -142,11 +170,13 @@ jobs:
           {
             echo "## New ransomware gang commit detected"
             echo
-            echo "**Upstream repository:** \`${UPSTREAM_REPOSITORY}\`"
+            echo "**Upstream repository:** [${UPSTREAM_REPOSITORY}](https://github.com/${UPSTREAM_REPOSITORY})"
             echo
             echo "**Tracked file:** \`${TRACKED_FILE}\`"
             echo
-            echo "**Matching commits:** ${{ steps.detect.outputs.match_count }}"
+            echo "**Relevant commits checked:** ${{ steps.detect.outputs.checked_count }}"
+            echo
+            echo "**Matching Add commits:** ${{ steps.detect.outputs.match_count }}"
             echo
             echo '```text'
             cat "${{ steps.detect.outputs.match_file }}"
@@ -160,17 +190,91 @@ jobs:
           {
             echo "## No matching ransomware gang commits"
             echo
-            echo "No new upstream commits met both conditions:"
+            echo "The workflow checked upstream changes to:"
+            echo
+            echo "\`${TRACKED_FILE}\`"
+            echo
+            echo "No new commit met both conditions:"
             echo
             echo "1. The commit modified \`${TRACKED_FILE}\`."
-            echo "2. The commit subject contained the exact word \`Add\`."
+            echo "2. The commit subject contained the exact, case-sensitive word \`Add\`."
+            echo
+            echo "**Relevant commits checked:** ${{ steps.detect.outputs.checked_count }}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # The Slack delivery step will be inserted here.
+      # This step is deliberately before synchronization.
       #
-      # Slack should be called before synchronization. If Slack delivery fails,
-      # the fork should not be synchronized, so the same commit can be retried.
+      # If Slack rejects the webhook request, the workflow stops and does not
+      # synchronize the fork. The same upstream commit can then be retried.
+      - name: Send matching commits to Slack
+        if: steps.detect.outputs.matched == 'true'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLCK_HOOK }}
+          MATCH_FILE: ${{ steps.detect.outputs.match_file }}
+          MATCH_COUNT: ${{ steps.detect.outputs.match_count }}
+        shell: bash
+        run: |
+          set -euo pipefail
 
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "::error::The SLCK_HOOK repository secret is missing or empty."
+            exit 1
+          fi
+
+          if [ ! -s "$MATCH_FILE" ]; then
+            echo "::error::The matching-commit file is missing or empty."
+            exit 1
+          fi
+
+          # Limit commit details to prevent an excessively large Slack message.
+          MATCH_DETAILS="$(head -c 2500 "$MATCH_FILE")"
+
+          MESSAGE="$(
+            printf '%s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s\n\n%s' \
+              ':rotating_light: *New ransomware gang commit detected*' \
+              "*Upstream repository:* <https://github.com/${UPSTREAM_REPOSITORY}|${UPSTREAM_REPOSITORY}>" \
+              "*Tracked file:* \`${TRACKED_FILE}\`" \
+              "*Matching Add commits:* ${MATCH_COUNT}" \
+              '```' \
+              "$MATCH_DETAILS" \
+              '```' \
+              "<https://github.com/${UPSTREAM_REPOSITORY}/commits/${UPSTREAM_BRANCH}/${TRACKED_FILE}|Review upstream file history>" \
+              '_Treat the new group or leak-site claim as unverified until corroborated._'
+          )"
+
+          jq -n \
+            --arg text "$MESSAGE" \
+            '{text: $text}' \
+            > "$RUNNER_TEMP/slack-payload.json"
+
+          HTTP_STATUS="$(
+            curl \
+              --silent \
+              --show-error \
+              --output "$RUNNER_TEMP/slack-response.txt" \
+              --write-out "%{http_code}" \
+              --request POST \
+              --header "Content-Type: application/json" \
+              --data @"$RUNNER_TEMP/slack-payload.json" \
+              "$SLACK_WEBHOOK_URL"
+          )"
+
+          SLACK_RESPONSE="$(cat "$RUNNER_TEMP/slack-response.txt")"
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "::error::Slack returned HTTP ${HTTP_STATUS}: ${SLACK_RESPONSE}"
+            exit 1
+          fi
+
+          if [ "$SLACK_RESPONSE" != "ok" ]; then
+            echo "::error::Unexpected Slack response: ${SLACK_RESPONSE}"
+            exit 1
+          fi
+
+          echo "Slack accepted the notification."
+
+      # Synchronization takes place only after any required Slack notification
+      # has been accepted.
       - name: Synchronize upstream into fork
         shell: bash
         run: |
@@ -178,8 +282,6 @@ jobs:
 
           UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
 
-          # If the upstream tip is already part of the fork's history,
-          # there is nothing to synchronize.
           if git merge-base --is-ancestor "$UPSTREAM_REF" HEAD; then
             echo "The fork already contains the latest upstream commit."
             exit 0
