@@ -1,12 +1,12 @@
 name: Monitor ransomware gang additions
 
 on:
-  # Run automatically four times per hour.
+  # Run four times per hour.
   # GitHub Actions schedules use UTC and may occasionally be delayed.
   schedule:
     - cron: "7,22,37,52 * * * *"
 
-  # Also allow manual execution from the Actions page.
+  # Also permit manual runs from the GitHub Actions page.
   workflow_dispatch:
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       FORK_BRANCH: ${{ github.event.repository.default_branch }}
 
     steps:
-      # Full Git history is required to determine the merge base and inspect
+      # Complete Git history is required to identify the merge base and inspect
       # individual upstream commits.
       - name: Check out fork
         uses: actions/checkout@v5
@@ -43,7 +43,7 @@ jobs:
 
           UPSTREAM_BRANCH="$(
             gh api "repos/${UPSTREAM_REPOSITORY}" \
-              --jq ".default_branch"
+              --jq '.default_branch'
           )"
 
           if [ -z "$UPSTREAM_BRANCH" ]; then
@@ -51,6 +51,7 @@ jobs:
             exit 1
           fi
 
+          # Make the upstream branch available to all following steps.
           echo "UPSTREAM_BRANCH=$UPSTREAM_BRANCH" >> "$GITHUB_ENV"
 
           if git remote get-url upstream >/dev/null 2>&1; then
@@ -72,7 +73,7 @@ jobs:
           echo "Fork SHA: $(git rev-parse HEAD)"
           echo "Upstream SHA: $(git rev-parse "upstream/${UPSTREAM_BRANCH}")"
 
-      - name: Detect Add commits affecting ransomware_gang.md
+      - name: Detect ransomware addition commits
         id: detect
         shell: bash
         run: |
@@ -81,6 +82,7 @@ jobs:
           UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
           MATCH_FILE="$RUNNER_TEMP/matching-commits.txt"
 
+          # Create an empty file to hold matching commit details.
           : > "$MATCH_FILE"
 
           if ! BASE_SHA="$(git merge-base HEAD "$UPSTREAM_REF")"; then
@@ -91,23 +93,37 @@ jobs:
           MATCH_COUNT=0
           CHECKED_COUNT=0
 
-          # Match the exact, case-sensitive word "Add".
+          # Match the complete words:
           #
-          # Matches:
+          #   add
+          #   added
+          #   new
+          #
+          # Matching is case-insensitive, and the keyword can appear anywhere
+          # in the commit subject.
+          #
+          # Examples that match:
           #   Add D1R ransomware data leak site
-          #   Update list: Add Example group
-          #
-          # Does not match:
-          #   Added D1R ransomware data leak site
-          #   Adding D1R ransomware data leak site
           #   add D1R ransomware data leak site
-          ADD_REGEX='(^|[^[:alnum:]_])Add([^[:alnum:]_]|$)'
+          #   D1R ransomware data leak site added
+          #   Added Example ransomware group
+          #   New ransomware operation
+          #   Update list - new Example group
+          #
+          # Examples that do not match:
+          #   Address formatting problem
+          #   Additional corrections
+          #   Renew documentation
+          KEYWORD_REGEX='(^|[^[:alnum:]_])(add(ed)?|new)([^[:alnum:]_]|$)'
 
           echo "Checking upstream commit range:"
           echo "${BASE_SHA}..${UPSTREAM_REF}"
           echo
           echo "Tracked file: ${TRACKED_FILE}"
+          echo "Keywords: add, added, new"
+          echo "Keyword matching: case-insensitive"
 
+          # git rev-list is restricted to commits that modified the tracked file.
           while IFS= read -r COMMIT_SHA; do
             [ -n "$COMMIT_SHA" ] || continue
 
@@ -116,6 +132,7 @@ jobs:
             SUBJECT="$(git log -1 --format='%s' "$COMMIT_SHA")"
             SHORT_SHA="$(git rev-parse --short "$COMMIT_SHA")"
             AUTHOR="$(git log -1 --format='%an' "$COMMIT_SHA")"
+
             COMMIT_DATE="$(
               git log -1 \
                 --format='%ad' \
@@ -125,7 +142,9 @@ jobs:
 
             echo "Checking ${SHORT_SHA}: ${SUBJECT}"
 
-            if [[ "$SUBJECT" =~ $ADD_REGEX ]]; then
+            if printf '%s\n' "$SUBJECT" |
+              grep -Eiq "$KEYWORD_REGEX"; then
+
               MATCH_COUNT=$((MATCH_COUNT + 1))
 
               {
@@ -176,7 +195,7 @@ jobs:
             echo
             echo "**Relevant commits checked:** ${{ steps.detect.outputs.checked_count }}"
             echo
-            echo "**Matching Add commits:** ${{ steps.detect.outputs.match_count }}"
+            echo "**Matching add/added/new commits:** ${{ steps.detect.outputs.match_count }}"
             echo
             echo '```text'
             cat "${{ steps.detect.outputs.match_file }}"
@@ -187,28 +206,31 @@ jobs:
         if: steps.detect.outputs.matched != 'true'
         shell: bash
         run: |
+          set -euo pipefail
+
           {
             echo "## No matching ransomware gang commits"
             echo
-            echo "The workflow checked upstream changes to:"
+            echo "The workflow checked new upstream commits modifying:"
             echo
             echo "\`${TRACKED_FILE}\`"
             echo
-            echo "No new commit met both conditions:"
+            echo "No commit met both conditions:"
             echo
             echo "1. The commit modified \`${TRACKED_FILE}\`."
-            echo "2. The commit subject contained the exact, case-sensitive word \`Add\`."
+            echo "2. The subject contained \`add\`, \`added\`, or \`new\`, regardless of capitalization."
             echo
             echo "**Relevant commits checked:** ${{ steps.detect.outputs.checked_count }}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # This step is deliberately before synchronization.
+      # This step intentionally runs before synchronization.
       #
-      # If Slack rejects the webhook request, the workflow stops and does not
-      # synchronize the fork. The same upstream commit can then be retried.
+      # If Slack rejects the request, the workflow stops and the fork is not
+      # synchronized. This allows the same upstream commits to be retried.
       - name: Send matching commits to Slack
         if: steps.detect.outputs.matched == 'true'
         env:
+          # SLCK_HOOK is the name of your GitHub Actions repository secret.
           SLACK_WEBHOOK_URL: ${{ secrets.SLCK_HOOK }}
           MATCH_FILE: ${{ steps.detect.outputs.match_file }}
           MATCH_COUNT: ${{ steps.detect.outputs.match_count }}
@@ -226,7 +248,7 @@ jobs:
             exit 1
           fi
 
-          # Keep the message at a manageable size.
+          # Keep the Slack message at a manageable size.
           MATCH_DETAILS="$(head -c 2500 "$MATCH_FILE")"
 
           MESSAGE="$(
@@ -234,14 +256,15 @@ jobs:
               ':rotating_light: New ransomware gang commit detected' \
               "Upstream repository: https://github.com/${UPSTREAM_REPOSITORY}" \
               "Tracked file: ${TRACKED_FILE}" \
-              "Matching Add commits: ${MATCH_COUNT}" \
+              "Matching add/added/new commits: ${MATCH_COUNT}" \
               'Commit details:' \
               "$MATCH_DETAILS" \
               "File history: https://github.com/${UPSTREAM_REPOSITORY}/commits/${UPSTREAM_BRANCH}/${TRACKED_FILE}" \
-              'Treat the new group or leak-site claim as unverified until corroborated.'
+              'Treat the new ransomware group or leak-site claim as unverified until corroborated.'
           )"
 
-          # This must match the Slack Workflow Builder variable named "text".
+          # The JSON key "text" must match the variable named "text" in your
+          # Slack Workflow Builder webhook trigger.
           jq -n \
             --arg text "$MESSAGE" \
             '{text: $text}' \
@@ -259,10 +282,12 @@ jobs:
               "$SLACK_WEBHOOK_URL"
           )"
 
-          SLACK_RESPONSE="$(cat "$RUNNER_TEMP/slack-response.txt")"
+          SLACK_RESPONSE="$(
+            cat "$RUNNER_TEMP/slack-response.txt"
+          )"
 
-          # Workflow Builder webhooks may not return the literal response "ok".
-          # Any HTTP response from 200 through 299 is treated as successful.
+          # Slack Workflow Builder webhooks may not return the literal word
+          # "ok". Any HTTP response in the 200-299 range is accepted.
           case "$HTTP_STATUS" in
             2??)
               echo "Slack accepted the workflow webhook request."
@@ -273,8 +298,7 @@ jobs:
               ;;
           esac
 
-      # Synchronization takes place only after any required Slack notification
-      # has been accepted.
+      # Synchronization happens only after Slack accepts any required alert.
       - name: Synchronize upstream into fork
         shell: bash
         run: |
@@ -282,6 +306,8 @@ jobs:
 
           UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
 
+          # If the upstream tip is already in the fork's history, there is
+          # nothing to synchronize.
           if git merge-base --is-ancestor "$UPSTREAM_REF" HEAD; then
             echo "The fork already contains the latest upstream commit."
             exit 0
