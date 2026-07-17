@@ -1,0 +1,195 @@
+name: Monitor ransomware gang additions
+
+on:
+  # Manual execution only during initial setup.
+  # The schedule will be added after Slack is connected.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deepdarkcti-upstream-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    env:
+      UPSTREAM_REPOSITORY: fastfire/deepdarkCTI
+      TRACKED_FILE: ransomware_gang.md
+      FORK_BRANCH: ${{ github.event.repository.default_branch }}
+
+    steps:
+      - name: Check out fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure upstream repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Obtain the upstream repository's default branch.
+          UPSTREAM_BRANCH="$(
+            gh api "repos/${UPSTREAM_REPOSITORY}" \
+              --jq '.default_branch'
+          )"
+
+          echo "UPSTREAM_BRANCH=$UPSTREAM_BRANCH" >> "$GITHUB_ENV"
+
+          # Create or update the local upstream Git remote.
+          if git remote get-url upstream >/dev/null 2>&1; then
+            git remote set-url \
+              upstream \
+              "https://github.com/${UPSTREAM_REPOSITORY}.git"
+          else
+            git remote add \
+              upstream \
+              "https://github.com/${UPSTREAM_REPOSITORY}.git"
+          fi
+
+          git fetch --no-tags upstream "$UPSTREAM_BRANCH"
+
+          echo "Fork branch: $FORK_BRANCH"
+          echo "Upstream branch: $UPSTREAM_BRANCH"
+          echo "Fork SHA: $(git rev-parse HEAD)"
+          echo "Upstream SHA: $(git rev-parse "upstream/${UPSTREAM_BRANCH}")"
+
+      - name: Detect Add commits affecting ransomware_gang.md
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
+          BASE_SHA="$(git merge-base HEAD "$UPSTREAM_REF")"
+          MATCH_FILE="$RUNNER_TEMP/matching-commits.txt"
+
+          : > "$MATCH_FILE"
+
+          MATCH_COUNT=0
+
+          # Matches the exact, case-sensitive word "Add".
+          # Matches: Add D1R ransomware data leak site
+          # Does not match: Added, Adding, address
+          ADD_REGEX='(^|[^[:alnum:]_])Add([^[:alnum:]_]|$)'
+
+          echo "Checking commits in range:"
+          echo "${BASE_SHA}..${UPSTREAM_REF}"
+          echo
+          echo "Only commits modifying ${TRACKED_FILE} will be checked."
+
+          while IFS= read -r COMMIT_SHA; do
+            [ -n "$COMMIT_SHA" ] || continue
+
+            SUBJECT="$(git log -1 --format='%s' "$COMMIT_SHA")"
+            SHORT_SHA="$(git rev-parse --short "$COMMIT_SHA")"
+            AUTHOR="$(git log -1 --format='%an' "$COMMIT_SHA")"
+            COMMIT_DATE="$(
+              git log -1 \
+                --format='%ad' \
+                --date='format:%d %b %Y %H:%M UTC' \
+                "$COMMIT_SHA"
+            )"
+
+            echo "Checking: $SHORT_SHA - $SUBJECT"
+
+            if [[ "$SUBJECT" =~ $ADD_REGEX ]]; then
+              MATCH_COUNT=$((MATCH_COUNT + 1))
+
+              {
+                echo "SHA=$COMMIT_SHA"
+                echo "SHORT_SHA=$SHORT_SHA"
+                echo "SUBJECT=$SUBJECT"
+                echo "AUTHOR=$AUTHOR"
+                echo "DATE=$COMMIT_DATE"
+                echo "URL=https://github.com/${UPSTREAM_REPOSITORY}/commit/${COMMIT_SHA}"
+                echo "---"
+              } >> "$MATCH_FILE"
+            fi
+          done < <(
+            git rev-list \
+              --reverse \
+              "${BASE_SHA}..${UPSTREAM_REF}" \
+              -- "$TRACKED_FILE"
+          )
+
+          echo "match_count=$MATCH_COUNT" >> "$GITHUB_OUTPUT"
+          echo "match_file=$MATCH_FILE" >> "$GITHUB_OUTPUT"
+
+          if [ "$MATCH_COUNT" -gt 0 ]; then
+            echo "matched=true" >> "$GITHUB_OUTPUT"
+            echo
+            echo "Found $MATCH_COUNT matching commit(s):"
+            cat "$MATCH_FILE"
+          else
+            echo "matched=false" >> "$GITHUB_OUTPUT"
+            echo
+            echo "No matching commits were found."
+          fi
+
+      - name: Add matching commits to workflow summary
+        if: steps.detect.outputs.matched == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          {
+            echo "## New ransomware gang commit detected"
+            echo
+            echo "**Upstream repository:** \`${UPSTREAM_REPOSITORY}\`"
+            echo
+            echo "**Tracked file:** \`${TRACKED_FILE}\`"
+            echo
+            echo "**Matching commits:** ${{ steps.detect.outputs.match_count }}"
+            echo
+            echo '```text'
+            cat "${{ steps.detect.outputs.match_file }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Report when no matching commits are found
+        if: steps.detect.outputs.matched != 'true'
+        shell: bash
+        run: |
+          {
+            echo "## No matching ransomware gang commits"
+            echo
+            echo "No new upstream commits met both conditions:"
+            echo
+            echo "1. The commit modified \`${TRACKED_FILE}\`."
+            echo "2. The commit subject contained the exact word \`Add\`."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # The Slack delivery step will be inserted here.
+      #
+      # Slack should be called before synchronization. If Slack delivery fails,
+      # the fork should not be synchronized, so the same commit can be retried.
+
+      - name: Synchronize upstream into fork
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
+
+          # If the upstream tip is already part of the fork's history,
+          # there is nothing to synchronize.
+          if git merge-base --is-ancestor "$UPSTREAM_REF" HEAD; then
+            echo "The fork already contains the latest upstream commit."
+            exit 0
+          fi
+
+          git config user.name "deepdarkCTI-monitor[bot]"
+          git config user.email \
+            "deepdarkCTI-monitor[bot]@users.noreply.github.com"
+
+          git merge --no-edit "$UPSTREAM_REF"
+          git push origin "HEAD:${FORK_BRANCH}"
+
+          echo "Fork synchronized with ${UPSTREAM_REPOSITORY}."
