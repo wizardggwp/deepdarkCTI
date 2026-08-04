@@ -1,7 +1,7 @@
 name: Monitor ransomware gang additions
 
 on:
-  # Run four times per hour.
+  # Run every hour.
   # GitHub Actions schedules use UTC and may occasionally be delayed.
   schedule:
     - cron: "0 * * * *"
