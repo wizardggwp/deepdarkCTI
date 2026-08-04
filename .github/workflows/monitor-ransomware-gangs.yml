@@ -4,7 +4,7 @@ on:
   # Run every hour.
   # GitHub Actions schedules use UTC and may occasionally be delayed.
   schedule:
-    - cron: "0 * * * *"
+    - cron: "31 * * * *"
 
   # Also permit manual runs from the GitHub Actions page.
   workflow_dispatch:
