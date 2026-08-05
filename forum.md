@@ -78,6 +78,7 @@
 | [CARDERS.BIZ](https://carders.biz)                                                                                                         | ONLINE           |                                  |
 | [CARDMAFIA](https://cardmafia.cc)                                                                                                          | ONLINE           |                                  |
 | [CARDING FORUM (Deep)](https://cardingforum.cx)                                                                                            | OFFLINE          |                                  |
+| [CEBULKA](http://cebulka7uxchnbpvmqapg5pfos4ngaxglsktzvha7a5rigndghvadeyd.onion)                                                           | ONLINE           |                                  |
 | [CENTER CLUB](https://center-club.io)                                                                                                      | ONLINE           |                                  |
 | [CHITACHOK](https://chitachok.ru)                                                                                                          | ONLINE           |                                  |
 | [COMFYBOX](https://comfybox.floofey.dog)                                                                                                   | ONLINE           |                                  |
@@ -109,6 +110,7 @@
 | [DANGEROUSTHINGS](https://forum.dangerousthings.com)                                                                                       | ONLINE           |                                  |
 | [DARK2WEB](https://dark2web.net)                                                                                                           | ONLINE           |                                  |
 | [DARKCLUB](https://darkclub.pw)                                                                                                            | ONLINE           |                                  |
+| [DARKFOREST](http://dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion)                                                        | ONLINE           |                                  |
 | [DARKFORUM](https://darkforum.in)                                                                                                          | OFFLINE          |                                  |
 | [DARKFORUM](https://darkforum.net)                                                                                                         | OFFLINE          |                                  |
 | [DARKFORUMS (Deep)](https://darkforums.me)                                                                                                 | OFFLINE          |                                  |
@@ -173,6 +175,7 @@
 | [FUNKSEC RANSOMWARE](http://7ixfdvqb4eaju5lzj4gg76kwlrxg4ugqpuog5oqkkmgfyn33h527oyyd.onion/)                                               | ONLINE           |                                  |
 | [G0D.ONE MARKET](https://www.g0d.one)                                                                                                      | OFFLINE          |                                  |
 | [GERKI](http://gerkipwhfuqeeizl.onion)                                                                                                     | OFFLINE          |                                  |
+| [GERMANIA](http://germania7zs27fu3gi76wlr5rd64cc2yjexyzvrbm4jufk7pibrpizad.onion)                                                          | ONLINE           |                                  |
 | [GETREKT](https://getrekt.io)                                                                                                              | ONLINE           | https://t.me/getrektio           |
 | [HACKFORUMS](https://hackforums.net/index.php)                                                                                             | ONLINE           |                                  |
 | [HACKINGFATHER](https://hackingfather.com/)                                                                                                | ONLINE           |                                  |
@@ -292,6 +295,7 @@
 | [RUTOR (Surface)](http://rutor.live)                                                                                                       | OFFLINE          |                                  |
 | [SECRET FORUM PROPAGANDA](http://qvwje7edtrfby6pfnm3q7o3lju22mfx3xsjyl3y33l66sbq3qcnlmvad.onion)                                           | ONLINE           |                                  |
 | [SEOPIRAT](https://seopirat.club)                                                                                                          | ONLINE           |                                  |
+| [SHADOW FORUM](http://w4ljqtyjnxinknz4hszn4bsof7zhfy5z2h4srfss4vvkoikiwz36o3id.onion)                                                      | ONLINE           |                                  |
 | [SINFUL](https://sinfulsite.com)                                                                                                           | ONLINE           |                                  |
 | [SINISTER](https://sinister.ly)                                                                                                            | ONLINE           |                                  |
 | [SKYFRAUD](http://bcbm4y7yusdxthg3.onion)                                                                                                  | OFFLINE          |                                  |
