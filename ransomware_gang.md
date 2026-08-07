@@ -69,6 +69,7 @@
 |[BABUK](http://nq4zyac4ukl4tykmidbzgdlvaboqeqsemkp4t35bzvjeve6zm2lqcjid.onion)|ONLINE||||
 |[BABUK v2](http://bxwu33iefqfc3rxigynn3ghvq4gdw3gxgxna5m4aa3o4vscdeeqhiqad.onion)|ONLINE||||
 |[BABYDUCK (Victims request ID page)](http://babydovegkmhbontykziyq7qivwzy33mu4ukqefe4mqpiiwd3wibnjqd.onion)|OFFLINE||||
+|[BARRACUDA](http://uvm6hk4wwstfddja5z5htgtlehmfyflffijz6iozsuqyacyibzxefkqd.onion)|ONLINE|||
 |[BASHE](http://basheqtvzqwz4vp6ks5lm2ocq7i6tozqgf6vjcasj4ezmsy4bkpshhyd.onion)|ONLINE||||
 |[BEAST](http://beast6azu4f7fxjakiayhnssybibsgjnmy77a6duufqw5afjzfjhzuqd.onion)|ONLINE||||
 |[BENZONA](http://benzona6x5ggng3hx52h4mak5sgx5vukrdlrrd3of54g2uppqog2joyd.onion)|ONLINE||7308E8CFE8AA18D718B5EF44C34A2E5E2C90B7FDB150FA2EC31E995F5F4B23044A98802A4DF0 - Twitter: @InfinityLeak||
@@ -253,6 +254,7 @@
 |[HANDALA](http://handala-hack.ps)|ONLINE||||
 |[HANDALA REDWANTED](http://handala-redwanted.ps)|ONLINE||||
 |[HARON](http://ft4zr2jzlqoyob7yg4fcpwyt37hox3ajajqnfkdvbfrkjioyunmqnpad.onion/blog.php)|OFFLINE|Chaddadgroup:Chaddadgroup|||
+|[HELIX](http://helixr2sncrd3ndsz5oho6mzqw3x5u7mvox5zcsngc5wm7v4l5k7oryd.onion/leaks)|ONLINE||||
 |[HELLDOWN](http://onyxcgfg4pjevvp5h34zvhaj45kbft3dg5r33j5vu3nyp7xic3vrzvad.onion)|OFFLINE||19A549A57160F384CF4E36EE1A24747ED99C623C48EA545F343296FB7092795D00875C94151E||
 |[HELLDOWN](http://onyxcym4mjilrsptk5uo2dhesbwntuban55mvww2olk5ygqafhu3i3yd.onion/)|ONLINE||19A549A57160F384CF4E36EE1A24747ED99C623C48EA545F343296FB7092795D00875C94151E||
 |[HELLCAT](http://hellcakbszllztlyqbjzwcbdhfrodx55wq77kmftp4bhnhsnn5r3odad.onion)|ONLINE||898923FE0699CFE1EFD17773425DECB080840877C29F883D389D6880B2B961737FACE98E82E4 - Telegram: @HCSupp - hcsupp@firemail.cc -  XMPP: hellcat@5222.de||
@@ -316,6 +318,7 @@
 |[LEAK BAZAR](https://mes4qo4rd6t3biyrm6q4twkquspzd7r4kg7va765nbdfxqgnc2w3pead.onion)|ONLINE||||
 |[LEAKED DATA](http://business-data-leaks.com)|ONLINE||||
 |[LEAKNET](http://nleakk6sejx45jxtk7x6iyt65hwvfrkifc5v7ertdlwm3gttbpvlvxqd.onion)|ONLINE||||
+|[LGROUP](http://4zrjdyuq4sjogm2epwwoleegquavhwo3o7fakstnlgox6guqt3qpe4qd.onion)|ONLINE||js677832@onionmail.org||
 |[LILITH](http://yeuajcizwytgmrntijhxphs6wn5txp2prs6rpndafbsapek3zd4ubcid.onion)|OFFLINE||BAC01607F29EC417FB4106AEAB5BDF79CD948F9120C8D889E8785ADFDCE88C00F08429E092EC||
 |[LINKC](http://iywqjjaf2zioehzzauys3sktbcdmuzm2fsjkqsblnm7dt6axjfpoxwid.onion/article)|ONLINE||||
 |[LOCKBIT 2.0 (Dark mirror 1)](http://lockbitapt2yfbt7lchxejug47kmqvqqxvvjpqkmevv4l3azl3gy6pyd.onion)|"REBRANDED" TO "THIS SITE IS NOW UNDER THE CONTROL OF THE UK, THE US AND THE CRONOS TASK FORCE"||3085B89A0C515D2FB124D645906F5D3DA5CB97CEBEA975959AE4F95302A04E1D709C3C4AE9B7||
