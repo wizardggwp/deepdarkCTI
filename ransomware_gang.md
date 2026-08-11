@@ -203,12 +203,14 @@
 |[DUNGHILL](http://nsalewdnfclsowcal6kn5csm4ryqmfpijznxwictukhrgvz2vbmjjjyd.onion)|ONLINE||https://t.me/leaksdirectory||
 |[ECH0RAIX](http://veqlxhq7ub5qze3qy56zx2cig2e6tzsgxdspkubwbayqije6oatma6id.onion)|OFFLINE||||
 |[ECH0RAIX](http://7zvu7njrx7q734kvk435ntuf37gfll2pu46fmrfoweczwpk2rhp444yd.onion)|ONLINE||
+|[ECLIPSE](http://eclipse4g5kxfwsvpu4qx5sdcnrji6gxl5gt67bucjlgt35g7akvjoid.onion)|ONLINE||||
 |[ENDURANCE](http://h44jyyfomcbnnw5dha7zgwgkvpzbzbdyx2onu4fxaa5smxrgbjgq7had.onion/)|OFFLINE||||
 |[EGREGOR](https://egregornews.com)|OFFLINE||||
 |[EL DORADO/BLACKLOCK](http://dataleakypypu7uwblm5kttv726l3iripago6p336xjnbstkjwrlnlid.onion)|ONLINE||||
 |[EMBARGO](http://embargobe3n5okxyzqphpmk3moinoap2snz5k6765mvtkk7hhi544jid.onion)|ONLINE||||
 |[ENTROPY](http://leaksv7sroztl377bbohzl42i3ddlfsxopcb6355zc7olzigedm5agad.onion)|OFFLINE|||
 |[EP918](http://dg5fyig37abmivryrxlordrczn6d6r5wzcfe2msuo5mbbu2exnu46fid.onion)|OFFLINE||||
+|[ETHICS](https://ethics67vxjomvlcugjovv4fc3g6ru5tpwotg533d4j3uf2btmnndead.onion/showcase)|ONLINE||||
 |[EVEREST](http://ransomocmou6mnbquqz44ewosbkjk3o5qjsl3orawojexfook2j7esad.onion)|ONLINE||||
 |[EVEREST](http://everestndkvzcibcje2cqxhre2hmmybl3rn2gwzwsblz7gx6uryn5rad.onion)|ONLINE||||
 |[EVILCORP](http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion)|OFFLINE||||
