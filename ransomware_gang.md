@@ -208,6 +208,7 @@
 |[EGREGOR](https://egregornews.com)|OFFLINE||||
 |[EL DORADO/BLACKLOCK](http://dataleakypypu7uwblm5kttv726l3iripago6p336xjnbstkjwrlnlid.onion)|ONLINE||||
 |[EMBARGO](http://embargobe3n5okxyzqphpmk3moinoap2snz5k6765mvtkk7hhi544jid.onion)|ONLINE||||
+|[EMPERADOR](http://emprdr4p7iwlhpky33tswt3k2qdeljyjcdpoysabudmmrz4z32laexad.onion)|ONLINE||||
 |[ENTROPY](http://leaksv7sroztl377bbohzl42i3ddlfsxopcb6355zc7olzigedm5agad.onion)|OFFLINE|||
 |[EP918](http://dg5fyig37abmivryrxlordrczn6d6r5wzcfe2msuo5mbbu2exnu46fid.onion)|OFFLINE||||
 |[ETHICS](https://ethics67vxjomvlcugjovv4fc3g6ru5tpwotg533d4j3uf2btmnndead.onion/showcase)|ONLINE||||
@@ -396,6 +397,7 @@
 |[MADCAT RANSOM](http://i2gc52bwm2vu2wnohwi3cli7t7hj3y2q7qj3th2bs64h2eej7z5jcgqd.onion) |OFFLINE||@MadCatRansom||
 |[Mamona RANSOMWARE](http://owt3kwkxod2pvxlv3uljzskfhebhrhoedrh5gqrxyyd6rrco4frzj5ad.onion)|ONLINE||||
 |[Mamona RANSOMWARE (Victims page)](http://bdhjur3agrogoxvwobbzpptkxhyewnjrhzqj4ug2dyfhf3dopyvvurid.onion)|ONLINE||||
+|[MAJINAHANASHI](http://lthicpjqc7gkn5eq3epxndc2uig3yngvcbdya4u3m3byjod5km4yuwqd.onion)|ONLINE||||
 |[MALAS](http://malas2urovbyyavjzaezkt5ohljvyd5lt7vv7mnsgbf2y4bwlh72doqd.onion)|ONLINE||||
 |[MALEKTEAM](https://malekteam.ac)|ONLINE||https://twitter.com/malekteam2||
 |[MALLOX](http://wtyafjyhwqrgo4a45wdvvwhen3cx4euie73qvlhkhvlrexljoyuklaad.onion)|ONLINE||mallox.resurrection@onionmail.org||
