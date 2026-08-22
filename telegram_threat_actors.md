@@ -1023,3 +1023,5 @@
 |https://t.me/+z5qwJtIQtW5mYzY9|ONLINE|Scattered Hunters V2||
 |https://t.me/RFShoutbox|ONLINE|Raid Forums||
 |https://t.me/breaches|ONLINE|Breaches||
+|https://t.me/TripleXTriple|ONLINE|TripleX||
+|https://t.me/normalhuntercrime|ONLINE|Normal Hunters||
