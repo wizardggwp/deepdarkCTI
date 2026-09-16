@@ -12,6 +12,7 @@
 | [ARBITRAJ](https://arbitraj-forum.ru)                                                                                                      | OFFLINE          |                                  |
 | [ASCARDING](https://ascarding.com)                                                                                                         | ONLINE           |                                  |
 | [ASTROPID](https://astropid.net)                                                                                                           | OFFLINE          |                                  |
+| [BATCHFORUMS](https://batchforums.site)                                                                                                           | ONLINE          |                                  |
 | [BFD Forum](http://bfdxjkv5e2z3ilrifzbnvxxvhbzsj67akjpj3zc6smzr4vv6oz565gyd.onion)                                                         | ONLINE           |                                  |
 | [BDF CLUB](https://bdfclub.com)                                                                                                            | ONLINE           |                                  |
 | [BEST CARDING WORLD](http://bestteermb42clir6ux7xm76d4jjodh3fpahjqgbddbmfrgp4skg2wqd.onion)                                                | ONLINE           |                                  |
@@ -138,6 +139,7 @@
 | [DATACLOUD](https://datacloud.space)                                                                                                       | ONLINE           |                                  |
 | [DATAFORUMS](https://dataforums.co)                                                                                                        | ONLINE           |                                  |
 | [DEDICATET](https://dedicatet.com)                                                                                                         | ONLINE           |                                  |
+| [DEEP ANSWERS](http://deeptyspkdq3nfvqvyzbkgwhtok4qoyhypsyiuo24wux4jnb6e3nyiqd.onion)                                                      | ONLINE           |                                  |
 | [DEFCON](http://ezdhgsy2aw7zg54z6dqsutrduhl22moami5zv2zt6urr6vub7gs6wfad.onion)                                                            | OFFLINE          |                                  |
 | [DEMONFORUMS](https://demonforums.net)                                                                                                     | ONLINE           |                                  |
 | [DOXBYTE](https://doxbyte.com)                                                                                                             | ONLINE           |                                  |
@@ -284,6 +286,7 @@
 | [REVERSING](https://reversing.center)                                                                                                      | ONLINE           |                                  |
 | [RF-CHEAT](https://www.rf-cheats.ru)                                                                                                       | ONLINE           |                                  |
 | [ROOTSPLOIT](https://rootsploit.org)                                                                                                       | ONLINE           |                                  |
+| [RUNION](http://runionv3do7jdylpx7ufc6qkmygehsiuichjcstpj4hb2ycqrnmp67ad.onion)                                                            | ONLINE           |                                  |
 | [RUTOR (Dark)](http://rutordeepkpafpudl22pbbhzm4llbgncunvgcc66kax55sc4mp4kxcid.onion)                                                      | OFFLINE          |                                  |
 | [RUTOR (Dark)](http://rutorbesth5lhmj47qz4fi5i4x5zvh4fizruog6iw2l3q223jmnawvid.onion)                                                      | ONLINE           |                                  |
 | [RUTOR (Dark)](http://rutorclubwiypaf63caqzlqwtcxqu5w6req6h7bjnvdlm4m7tddiwoyd.onion)                                                      | ONLINE           |                                  |
