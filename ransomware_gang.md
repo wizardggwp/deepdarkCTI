@@ -210,6 +210,7 @@
 |[ECH0RAIX](http://7zvu7njrx7q734kvk435ntuf37gfll2pu46fmrfoweczwpk2rhp444yd.onion)|ONLINE||
 |[ECLIPSE](http://eclipse4g5kxfwsvpu4qx5sdcnrji6gxl5gt67bucjlgt35g7akvjoid.onion)|ONLINE||||
 |[ENDURANCE](http://h44jyyfomcbnnw5dha7zgwgkvpzbzbdyx2onu4fxaa5smxrgbjgq7had.onion/)|OFFLINE||||
+|[ENDZONE](http://endzonezgz3sqzmtqg4acp4z7ao7xc6vunfhezjsnfqrm2ksudsredyd.onion)|ONLINE||||
 |[EGREGOR](https://egregornews.com)|OFFLINE||||
 |[EL DORADO/BLACKLOCK](http://dataleakypypu7uwblm5kttv726l3iripago6p336xjnbstkjwrlnlid.onion)|ONLINE||||
 |[EMBARGO](http://embargobe3n5okxyzqphpmk3moinoap2snz5k6765mvtkk7hhi544jid.onion)|ONLINE||||
@@ -620,6 +621,7 @@
 |[SOVCALI](http://z3mojpjnxt5tgqvu4wgosihl7pxvrcbyjcgquw2bwkyye5gwbhnf4kqd.onion)|ONLINE||||
 |[SPACEBEARS](http://5butbkrljkaorg5maepuca25oma7eiwo6a2rlhvkblb4v6mf3ki2ovid.onion)|ONLINE||||
 |[SPARTA](http://zj2ex44e2b2xi43m2txk4uwi3l55aglsarre7repw7rkfwpj54j46iqd.onion)|OFFLINE||||
+|[SPIRALS](http://spiralstfe7rtbna7zlv6szdwmjvjszf2d64zkf6z5jykrwnw5jbgpyd.onion)|ONLINE||||
 |[SPOOK DATA](http://spookuhvfyxzph54ikjfwf2mwmxt572krpom7reyayrmxbkizbvkpaid.onion/blog)|OFFLINE|||YES|
 |[SPY CORPORATE](https://spycorp.pro)|ONLINE||||
 |[STORM](http://yqhecvqtdvq6p7duqcgw2qca77spbgakxcoibtx6zpvfshltsbbbhfqd.onion)|ONLINE||||
