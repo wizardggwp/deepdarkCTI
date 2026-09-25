@@ -132,12 +132,14 @@
 |[CHILE LOCKER (Victim request ID Page)](http://z6vidveub2ypo3d3x7omsmcxqwxkkmvn5y3paoufyd2tt4bfbkg33kid.onion/login)|OFFLINE||||
 |[CHORT](http://hgxyonufefcglpekxma55fttev3lcfucrf7jvep2c3j6447cjroadead.onion)|ONLINE||||
 |[CICADA3301](http://cicadabv7vicyvgz5khl7v2x5yygcgow7ryy6yppwmxii4eoobdaztqd.onion)|ONLINE||||
+|[CIKLEAK](https://cikleak.net)|ONLINE||||
 |[CINDER](http://iah6477wcvisc45wl54u524fbrh4dnmtcctpg2fpe5epf3jbpkiwu4qd.onion)|ONLINE||||
 |[CIPHBIT](http://ciphbitqyg26jor7eeo6xieyq7reouctefrompp6ogvhqjba7uo4xdid.onion)|ONLINE||5B85F0F52F989C42FE18A08351D4B9F50D7A9832DBE4A068346DE35D5CF8F410BF89FA7A7AFF||
 |[CIPHERFORCE](http://o3ydbkayttkyg4iw2nc732jxmmex25bjeyqyvuuyngnxmpehdefjr3qd.onion)|ONLINE||||
 |[CIPHERFORCE](http://22evxpggnkyrxpluewqsrv5j4jtde6hut2peq3w44d6ase676qlkoead.onion)|ONLINE||||
 |[CLOAK](http://cloak7jpvcb73rtx2ff7kaw2kholu7bdiivxpzbhlny4ybz75dpxckqd.onion)|ONLINE||||
 |[CLOP](http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion)|ONLINE||||
+|[CLOP](http://clopofffr7tth6hsvxx3cys4qkshrbbiitnxfwts6hj64mtnaovjieyd.onion)|ONLINE
 |[CLOP (torrents)](http://toznnag5o3ambca56s2yacteu7q7x2avrfherzmz4nmujrjuib4iusad.onion)|ONLINE||||
 |[CLOP (Old)](http://ekbgzchl6x2ias37.onion)|OFFLINE||||
 |[COINBASE CARTEL](http://fjg4zi4opkxkvdz7mvwp7h6goe4tcby3hhkrz43pht4j3vakhy75znyd.onion)|ONLINE||1225DDE01980D7C7890A90E359EF4406D74DF7DB94F6C5F3B8378BB78444473022675C49FACB||
@@ -287,6 +289,7 @@
 |[ICEFIRE](http://kf6x3mjeqljqxjznaw65jixin7dpcunfxbbakwuitizytcpzn4iy5bad.onion/board/leak_list)|OFFLINE||||
 |[ICEFIRE](http://7kstc545azxeahkduxmefgwqkrrhq3mzohkzqvrv7aekob7z3iwkqvyd.onion/board/victim_list)|OFFLINE||||
 |[IMN CREW](http://imncrewwfkbjkhr2oylerfm5qtbzfphhmpcfag43xc2kfgvluqtlgoid.onion)|ONLINE||||
+|[IAMNOTAVILLAIN](http://o6rtgcjdjqyimjxexpejddhdfbehsjn4fcsazfkgwydeb27gqhtdntyd.onion)|ONLINE||||
 |[INC RANSOM](http://incblog7vmuq7rktic73r4ha4j757m3ptym37tyvifzp2roedyyzzxid.onion/blog/leaks)|ONLINE||||
 |[INC RANSOM - new](http://incblog6qu4y4mm4zvw5nrmue6qbwtgjsxpw6b7ixzssu36tsajldoad.onion)|ONLINE||||
 |[INC RANSOM (Deep)](http://incapt.su/blog/leaks)|ONLINE||||
@@ -449,6 +452,7 @@
 |[MS13-089](http://msleakjir7pxbe6onlqe5uwgvdmy6nq4mnwfy7ojswbhnleenm77vgad.onion)|ONLINE||ms13@onionmail.org||
 |[N3TW0RM](http://n3twormruynhn3oetmxvasum2miix2jgg56xskdoyihra4wthvlgyeyd.onion)|OFFLINE||||
 |[N0N](http://nongzecboljwv3yfndkggsybsglfrkffw7bvk2zemuteoxe6etpusnad.onion)|ONLINE||||
+|[N0N (CLEARNET)](https://n0n.to)|ONLINE||||
 |[NASIR](http://yzcpwxuhbkyjnyn4qsf4o5dkvu6m2fyo7dwizmnlutanlmzlos7pa6qd.onion)|ONLINE||||
 |[NASIR](http://nasir.cc)|ONLINE||||
 |[NEFILIM](http://hxt254aygrsziejn.onion)|OFFLINE||||
