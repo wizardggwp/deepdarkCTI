@@ -599,8 +599,9 @@
 |[SHADOWBYT3$](http://shadowbyt3s.8bit.ca/leaks.php)|OFFLINE (404)||ShadowByt3S@proton.me||
 |[SHADOWBYT3$](http://shdwbt3ja2ptjt6poluegas44i35727lgmoqqquoww642x3zyocyhuqd.onion)|ONLINE||||
 |[SHIBA](http://shibaitobajtr6yctvrijfitnugfulkmprrqbmu2ysk3zyzx2ufe3yqd.onion)|ONLINE||||
-|[SHINYHUNTERS](http://toolatedhs5dtr2pv6h5kdraneak5gs3sxrecqhoufc5e45edior7mqd.onion)|ONLINE||||
-|[SHINYHUNTERS](http://shnyhntww34phqoa6dcgnvps2yu7dlwzmy5lkvejwjdo6z7bmgshzayd.onion)|ONLINE||||
+|[SHINYHUNTERS](http://toolatedhs5dtr2pv6h5kdraneak5gs3sxrecqhoufc5e45edior7mqd.onion)|OFFLINE||||
+|[SHINYHUNTERS](http://shnyhntww34phqoa6dcgnvps2yu7dlwzmy5lkvejwjdo6z7bmgshzayd.onion)|OFFLINE||||
+|[SHINYHUNTERS](http://espeonsh2drryv4bsonur5ud7d6gooho2mvktqdmakdpoxkwwersinid.onion)|ONLINE||||
 |[SICARI KNIFE](http://sicariifoucvhyqg54smi3esg5sfcyw5z65t6yigqu4loyuoz62bb2id.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SICARI KNIFE](http://sicarinb4ktqcdpubjifzw3vixvzgtwacjmc5ks56kev52gxitegigad.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SICARI KNIFE](http://sicariktdbhjtrk6f2pwdh6wlequw7pcjva25skkzz4m3zz3opyox3qd.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
@@ -609,7 +610,6 @@
 |[SICARI KNIFE](http://sicari7m63wlggfxajiuonfsk72fgencne5ztzakyuhfxzq5rnbkjead.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SIEGEDSEC](http://nv5p2mmpctvyqdyyi5zwh4gnifq2uxdx4etvnmaheqlrw6ordrjwxryd.onion)|ONLINE||||
 |[SILENT](http://silentbgdghp3zeldwpumnwabglreql7jcffhx5vqkvtf2lshc4n5zid.onion)|OFFLINE||||
-|[SILENT](http://h7v7qkdil4lkm3ocwmcudzfmx7xmihtw53n3yk7b2cjtqu3zc4xqo7qd.onion)|ONLINE||||
 |[SINOBI](http://sinobi6ftrg27d6g4sjdt65malds6cfptlnjyw52rskakqjda6uvb7yd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6rlec6f2bgn6rd72xo7hvds4a5ajiu2if4oub2sut7fg3gomqd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6ywgmmvg2gj2yygkb2hxbimaxpqkyk27wti5zjwhfcldhackid.onion/leaks)|ONLINE||||
