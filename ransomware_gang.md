@@ -125,6 +125,7 @@
 |[BRAVOX](http://bravoxxtrmqeeevhl7gdh2yzvlrjxajr66d33c7ozosrccx4cz7cepad.onion)|ONLINE||||
 |[BRAVOX](https://bravoxxwcfz5qk43ychgveprpd5mw5hvxfs4a2uz2okx7mumiht4fzyd.onion)|ONLINE||||
 |[BROTHERHOOD](http://brohoodyaifh2ptccph5zfljyajjabwjjo4lg6gfp4xb6ynw5w7ml6id.onion)|ONLINE||138A7107FE83F6CBC03A43D484C17CCBF7E6ED5060792D6AFB1BE4358FB9482831B0033BACB0||
+|[BYOD](http://byodxn5s7sua6oyyjj74rycgn6afncfckprt5ezskt3cni6lg3wdrgad.onion)||ONLINE||||
 |[CACTUS](https://cactusbloguuodvqjmnzlwetjlpj6aggc6iocwhuupb47laukux7ckid.onion)|ONLINE||||
 |[CEPHALUS](http://cephalus6oiypuwumqlwurvbmwsfglg424zjdmywfgqm4iehkqivsjyd.onion)|ONLINE||||
 |[CHAOS](http://hptqq2o2qjva7lcaaq67w36jihzivkaitkexorauw7b2yul2z6zozpqd.onion)|ONLINE||BFC836EBAE06450FDD36B63170F121F44ADADFF2DAFAAFA41314B6778F6003501B0799F013FA - EC99BD5A36DE69144F5402C832B5413295323FC7C12259C53E4AA6D5BC2D4E6DA44C537F9FEC||
@@ -607,7 +608,8 @@
 |[SICARI KNIFE](http://sicarilxx2br6esqnhad4w26bcgb5j2snbbnhyo4b6t7kby2oy4x3jad.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SICARI KNIFE](http://sicari7m63wlggfxajiuonfsk72fgencne5ztzakyuhfxzq5rnbkjead.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SIEGEDSEC](http://nv5p2mmpctvyqdyyi5zwh4gnifq2uxdx4etvnmaheqlrw6ordrjwxryd.onion)|ONLINE||||
-|[SILENT](http://silentbgdghp3zeldwpumnwabglreql7jcffhx5vqkvtf2lshc4n5zid.onion)|ONLINE||||
+|[SILENT](http://silentbgdghp3zeldwpumnwabglreql7jcffhx5vqkvtf2lshc4n5zid.onion)|OFFLINE||||
+|[SILENT](http://h7v7qkdil4lkm3ocwmcudzfmx7xmihtw53n3yk7b2cjtqu3zc4xqo7qd.onion)|ONLINE||||
 |[SINOBI](http://sinobi6ftrg27d6g4sjdt65malds6cfptlnjyw52rskakqjda6uvb7yd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6rlec6f2bgn6rd72xo7hvds4a5ajiu2if4oub2sut7fg3gomqd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6ywgmmvg2gj2yygkb2hxbimaxpqkyk27wti5zjwhfcldhackid.onion/leaks)|ONLINE||||
