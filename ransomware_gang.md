@@ -432,10 +432,12 @@
 |[MEDUSA](http://s7lmmhlt3iwnwirxvgjidl6omcblvw2rg75txjfduy73kx5brlmiulad.onion)|ONLINE||||
 |[MEDUSA](http://cx5u7zxbvrfyoj6ughw76oa264ucuuizmmzypwum6ear7pct4yc723qd.onion)|ONLINE||||
 |[MEDUZA LOCKER](https://5tqdhriujqb7tb3cw3i3ffwaamjtnph6wsijdbecscyqhii3jbjz2rqd.onion)|ONLINE||||
+|[MEDUZA LOCKER](http://t33zoj4qwv455fog7qnb2azi5xcdxkixughmmduzbw2rtdgryqfbh6id.onion/)|ONLINE||||
 |[MEOW](http://meow6xanhzfci2gbkn3lmbqq7xjjufskkdfocqdngt3ltvzgqpsg5mid.onion)|ONLINE||||
 |[METAENCRYPTER](http://metacrptmytukkj7ajwjovdpjqzd7esg5v3sg344uzhigagpezcqlpyd.onion)|OFFLINE||||
 |[METAENCRYPTER](http://metacrpttdfpbm4qoxzcrqqgr6e6zafpazgxm72knmujw2mwvi34rwad.onion)|ONLINE||||
 |[MIGA](http://q7gmt7pbo4rrt27ydkiv2kxd7cimhztq2x7hzd557jthhu5zp6ujieid.onion)|ONLINE||||
+[MIMORI GROUP](https://mimori.group)|ONLINE||474F367B45B0342D82460E7E347A3072C10DAC7A42F7F162D67E10EF1322363F9BF96F874189||
 |[MNT6](http://ttvbuilv5mf2wggfjgmvin22ndzghpukhsyy6coz3p4wt5nqnxah7tyd.onion)|ONLINE||||
 |[MOGILEVICH](http://dkgn45pinr7nwvdaehemcrpgcjqf4fooit3c4gjw6dhzrp443ctvnoad.onion)|ONLINE||||
 |[MONEYMESSAGE](http://blogvl7tjyjvsfthobttze52w36wwiz34hrfcmorgvdzb6hikucb7aqd.onion)|ONLINE||||
@@ -697,6 +699,7 @@
 |[WARLOCK](http://zfytizegsze6uiswodhbaalyy5rawaytv2nzyzdkt3susbewviqqh7yd.onion)|ONLINE||||
 |[WEREWOLVES GROUP](https://werewolves.pro/en/)|ONLINE||||
 |[WEYHRO](http://xtxtpqpyaaek4p4525ksepyyy75gfvi47fptm2gftw7cn656rnfhzdqd.onion/leaks)|ONLINE||||
+|[WHITEARMOR W.A](http://whitearz6uvtfdefgsc4r3mzmyswtte65k5umcmv6cu6zhi4l5k4irad.onion)|ONLINE||05e7d90e446b823946dc3dfd8210ce14835cad13b28edadc798b51c186a29f5f7b||
 |[WIPER LEAK (only on Discord)](https://discord.com/invite/jjZQdDNnGh)|ONLINE||||
 |[WORLDLEAKS](http://worldleaksartrjm3c6vasllvgacbi5u3mgzkluehrzhk2jz4taufuid.onion)|ONLINE||||
 |[WORLDLEAKS (Early Access)](https://3jguvp6xhyypdjgxhxweu4zklse66v3awjj2zljpftcjyeoimepnwtyd.onion)|ONLINE||||
