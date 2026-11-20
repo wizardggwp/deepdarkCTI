@@ -273,6 +273,7 @@
 |[HANDALA](http://www.handala-team.to)|ONLINE||||
 |[HANDALA](http://handala-hack.ps)|ONLINE||||
 |[HANDALA REDWANTED](http://handala-redwanted.ps)|ONLINE||||
+|[HANDSOME BOY HACKING CLUB](http://copqdofcqjngdtugmxpannsh277t4pyngqkrcja636tnyhqbhucxnmid.onion)|ONLINE||contacthbhc@protonmail.com||
 |[HARON](http://ft4zr2jzlqoyob7yg4fcpwyt37hox3ajajqnfkdvbfrkjioyunmqnpad.onion/blog.php)|OFFLINE|Chaddadgroup:Chaddadgroup|||
 |[HELIX](http://helixr2sncrd3ndsz5oho6mzqw3x5u7mvox5zcsngc5wm7v4l5k7oryd.onion/leaks)|ONLINE||||
 |[HELLDOWN](http://onyxcgfg4pjevvp5h34zvhaj45kbft3dg5r33j5vu3nyp7xic3vrzvad.onion)|OFFLINE||19A549A57160F384CF4E36EE1A24747ED99C623C48EA545F343296FB7092795D00875C94151E||
@@ -623,6 +624,7 @@
 |[SICARI KNIFE](http://sicari7m63wlggfxajiuonfsk72fgencne5ztzakyuhfxzq5rnbkjead.onion)|ONLINE||2368C617830435DD74C41323BD684F04627A8047F92A885419E0191AC21F6D49733E4FF2C60E||
 |[SIEGEDSEC](http://nv5p2mmpctvyqdyyi5zwh4gnifq2uxdx4etvnmaheqlrw6ordrjwxryd.onion)|ONLINE||||
 |[SILENT](http://silentbgdghp3zeldwpumnwabglreql7jcffhx5vqkvtf2lshc4n5zid.onion)|OFFLINE||||
+|[SILENTVAULT](http://lnvpdjkv2bflmmotu3doqxhzks2m2svuiirdiizjfe7p3e5isfg4xqid.onion)|ONLINE||76918f6660388800801d3262a63ae835b949486af65344e3cc48b6955923846d02b7f4eeffe6||
 |[SINOBI](http://sinobi6ftrg27d6g4sjdt65malds6cfptlnjyw52rskakqjda6uvb7yd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6rlec6f2bgn6rd72xo7hvds4a5ajiu2if4oub2sut7fg3gomqd.onion/leaks)|ONLINE||||
 |[SINOBI](http://sinobi6ywgmmvg2gj2yygkb2hxbimaxpqkyk27wti5zjwhfcldhackid.onion/leaks)|ONLINE||||
@@ -639,6 +641,7 @@
 |[SNATCH (Dark)](http://hl66646wtlp2naoqnhattngigjp5palgqmbwixepcjyq5i534acgqyad.onion/index.php)|ONLINE||https://t.me/snatch_info||
 |[SODINOKIBI (REVIL)](http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion)|OFFLINE||||
 |[SOLIDBIT (Chat panel)](http://solidb2jco63vbhx4sfimnqmwhtdjk4jbbgq7a24cmzzkfse4rduxgid.onion)|OFFLINE||||
+|[SOULGROUP](https://codice-ledger.io)|ONLINE||e1512a8e5584f73469843209d239548d7436400c7cbda833859bfd5a7b377f34e87c3298f2c4||
 |[SOVCALI](http://z3mojpjnxt5tgqvu4wgosihl7pxvrcbyjcgquw2bwkyye5gwbhnf4kqd.onion)|ONLINE||||
 |[SPACEBEARS](http://5butbkrljkaorg5maepuca25oma7eiwo6a2rlhvkblb4v6mf3ki2ovid.onion)|ONLINE||||
 |[SPARTA](http://zj2ex44e2b2xi43m2txk4uwi3l55aglsarre7repw7rkfwpj54j46iqd.onion)|OFFLINE||||
@@ -705,6 +708,7 @@
 |[UMBRA](http://umbra7isogjsgdcndz3uu6qvl5zftjptt6s3iiuecjlwbt4yqyvrhcid.onion)|ONLINE||05e968dec429b5136fd94eccbec67ce1c56c7ba10014e35a70cc60dba3d58f2836||
 |[WALLSTREET](http://4dwiv37h7hhuhjpvtn72hme4ylcv3qoe65arfc6mbweal7als6ma7pyd.onion)|ONLINE||||
 |[WALocker](http://weepangrbqjfsxd2noz4bmolztnqsma3vw4c6qfnbfusadzd2m26emqd.onion/)|ONLINE||||
+|[WARDEN](http://warden7xzx54m6xk2zn5wpptekpe5rgewdjkfxnkjuu63fbbvjnljrqd.onion/)|ONLINE||||
 |[WARLOCK](http://elqfbcx5nofwtqfookqml7ltx2g6q6tmddys6e25vgu3al2meim6cbqd.onion)|ONLINE||||
 |[WARLOCK](http://zfytizegsze6uiswodhbaalyy5rawaytv2nzyzdkt3susbewviqqh7yd.onion)|ONLINE||||
 |[WEREWOLVES GROUP](https://werewolves.pro/en/)|ONLINE||||
