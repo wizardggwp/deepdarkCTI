@@ -173,6 +173,8 @@
 | [EXPLOITS.WS](https://exploits.ws)                                                                                                         | ONLINE           |                                  |
 | [EZCARDER](https://ezcarder.is/)                                                                                                           | ONLINE           |                                  |
 | [FEMBOYFORUM](https://femboyforum.com/)                                                                                                    | ONLINE           |                                  |
+| [FORUMNOX (Deep)](https://forumnox.com)                                                                                                    | ONLINE           | [Telegram community](https://t.me/forumnoxcommunity), [Telegram announcements](https://t.me/forumnoxannouncements), [X](https://x.com/forumnox) |
+| [FORUMNOX (Dark)](http://tyoeevaqn6alon623bfm7r4e7z3so54ky6uvbqkza3fyun7g4cm24hyd.onion/)                                                  | ONLINE           |                                  |
 | [FORUMTEAM.ONLINE](https://forumteam.online)                                                                                               | ONLINE           |                                  |
 | [FORUMTEAM.TOP](https://forumteam.top)                                                                                                     | ONLINE           |                                  |
 | [FSSQUAD](https://fssquad.com)                                                                                                             | OFFLINE          |                                  |
@@ -195,6 +197,7 @@
 | [INCIDIOUS](https://incidious.se)                                                                                                          | ONLINE           |                                  |
 | [INFECTED ZONE](https://infected-zone.com)                                                                                                 | ONLINE           |                                  |
 | [INFINITY](https://infinity.ink)                                                                                                           | ONLINE           |                                  |
+| [INTELFORUMS](https://intelforums.cc)                                                                                                      | ONLINE           |                                  |
 | [ITALIAN DARKNET COMMUNITY 3.0 (Dark)](http://dhri7ogvfpnflpkj3sc5x7umjl4gd26bkukzotbwdy76yjp5qvhjzmqd.onion)                              | OFFLINE          |                                  |
 | [KCC](http://kcc.cat)                                                                                                                      | ONLINE           |                                  |
 | [KICKASS](http://o3nqszgvtqwcc2mxqcqgeyulkh6spiv6yaahgu7znaphzmikfvpu5aad.onion)                                                           | ONLINE           |                                  |
@@ -274,8 +277,8 @@
 | [RAID FORUMS 2](https://raidforums2.com)                                                                                                   | OFFLINE          |                                  |
 | [RAID FORUMS TWO](https://raidforumstwo.com)                                                                                               | OFFLINE          |                                  |
 | [RAMBLE](http://rambleeeqrhty6s5jgefdfdtc6tfgg4jj6svr4jpgk4wjtg3qshwbaad.onion)                                                            | ONLINE           |                                  |
-| [RAMP (Dark)](http://rampjcdlqvgkoz5oywutpo6ggl7g6tvddysustfl6qzhr5osr24xxqqd.onion)                                                       | ONLINE           |                                  |
-| [RAMP (Deep)](https://ramp4u.io)                                                                                                           | ONLINE           |                                  |
+| [RAMP (Dark)](http://rampjcdlqvgkoz5oywutpo6ggl7g6tvddysustfl6qzhr5osr24xxqqd.onion)                                                       | OFFLINE           |                                  |
+| [RAMP (Deep)](https://ramp4u.io)                                                                                                           | OFFLINE           |                                  |
 | [RAMP (Old)](http://ramp4u5iz4xx75vmt6nk5xfrs5mrmtokzszqxhhkjqlk7pbwykaz7zid.onion)                                                        | OFFLINE          |                                  |
 | [RAMP (Old)](http://wavbeudogz6byhnardd2lkp2jafims3j7tj6k6qnywchn2csngvtffqd.onion)                                                        | OFFLINE          |                                  |
 | [RANSOMED](http://g6ocfx3bb3pvdfawbgrbt3fqoht5t6dwc3hfmmueo76hz46qepidnxid.onion)                                                          | ONLINE           |                                  |
